@@ -1,0 +1,10 @@
+const path = require('path')
+
+const dbConfigPath = path.join(__dirname, 'dist', 'infra', 'db', 'cli')
+
+module.exports = {
+  config: path.resolve(dbConfigPath, 'config.js'),
+  // 'models-path': path.resolve(dbConfigPath, 'models'), // Not used currently
+  // 'seeders-path': path.resolve(dbConfigPath, 'seeders'), // Not used currently
+  'migrations-path': path.resolve(dbConfigPath, 'migrations'),
+}
